@@ -26,6 +26,7 @@ namespace Core_pro_with_react.Controllers
         public ItemModel[] Get(int itemType) //depending on parameter we can get data here
         {
             ItemModel[] items = Items.Where(i => i.TtemType == itemType).ToArray();
+            System.Threading.Thread.Sleep(200);
             return items;
         }
     }
