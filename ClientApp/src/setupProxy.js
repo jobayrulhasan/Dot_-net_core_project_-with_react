@@ -6,7 +6,8 @@ const target = env.ASPNETCORE_HTTPS_PORT ? `https://localhost:${env.ASPNETCORE_H
 
 const context =  [
   "/weatherforecast",
-  "/item",
+    "/item", //During run the project this part is called automaticly so we have to called the controller here.
+             //Without calling the conrolller we can not see anything in view page.
 ];
 
 module.exports = function(app) {

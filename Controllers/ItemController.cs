@@ -22,11 +22,11 @@ namespace Core_pro_with_react.Controllers
             new ItemModel { Id = 1, Title = "Superman 4", ImageId = 10, Ranking = 0, TtemType = 1},
         };
 
-        [HttpGet("{itemType:int}")] //specify the item typ
+        [HttpGet("{itemType:int}")] //specify the item type
         public ItemModel[] Get(int itemType) //depending on parameter we can get data here
         {
             ItemModel[] items = Items.Where(i => i.TtemType == itemType).ToArray();
-            System.Threading.Thread.Sleep(200);
+            System.Threading.Thread.Sleep(200); //This is using to show user the loading time during faching data
             return items;
         }
     }
