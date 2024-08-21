@@ -26,7 +26,7 @@ namespace Core_pro_with_react.Controllers
         public ItemModel[] Get(int itemType) //depending on parameter we can get data here
         {
             ItemModel[] items = Items.Where(i => i.TtemType == itemType).ToArray();
-            System.Threading.Thread.Sleep(200); //This is using to show user the loading time during faching data
+            System.Threading.Thread.Sleep(200); //This is using to show the user loading time during faching data
             return items;
         }
     }
